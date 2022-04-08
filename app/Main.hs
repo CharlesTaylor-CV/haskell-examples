@@ -11,8 +11,9 @@ main = do
     bools :: [Bool]
     bools = False : allTrue
 
-  putStrLn "This example compiles and terminates"
+  putStrLn "Both foldr & foldl' compile"
+  putStrLn "foldr terminates"
   print $ foldr (&&) True bools
 
-  putStrLn "This example compiles but will hang forever"
+  putStrLn "foldl' will hang forever on an infinite list"
   print $ foldl' (&&) True bools
